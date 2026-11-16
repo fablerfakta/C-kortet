@@ -2,6 +2,6 @@
 
 Plugga till C-körkortet med YKB och ADR. Teori och övningsfrågor på ett ställe.
 
-**Öppna appen:** https://fablerfakta.github.io/c-kortet/
+**Öppna appen:** https://fablerfakta.github.io/C-kortet/
 
 En del av [Fabler & Fakta Studio](https://fablerfakta.github.io).
