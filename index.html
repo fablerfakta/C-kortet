@@ -847,7 +847,6 @@ table.rt th,th{text-align:left;font:600 14px Barlow,sans-serif;color:var(--mute)
 </div>
 <div class="bsctl"><button type="button" id="bs-m" aria-label="Minska farten">−</button><input id="bs-s" type="range" min="10" max="130" step="1" value="80" aria-label="Fart i km/h"><button type="button" id="bs-p" aria-label="Öka farten">+</button></div>
 <div class="res" id="bs-out" aria-live="polite"></div>
-<div class="tip" id="bs-quick"></div>
 <div id="bs-fig" class="bsfig"></div>
 </details>
 
@@ -1126,7 +1125,6 @@ tb.innerHTML=h+'</table></div><p>Vid '+f(v)+' km/h. Reaktionstiden är räknad s
 var k=0;BSW.forEach(function(x,n){if(x[1]===bsMu)k=n});
 var b=v*v/(254*bsMu),tot=r+b;
 o.innerHTML='<p><b>'+BSW[k][0]+'</b></p><div class="scroll"><table><tr><td>Reaktionssträcka</td><td>'+m(r)+'</td></tr><tr><td>Bromssträcka</td><td>'+m(b)+'</td></tr><tr><td><b>Stoppsträcka</b></td><td><b>'+m(tot)+'</b></td></tr></table></div>';
-var F=v/10,fa=[1,1.5,3,8][k],q=$("bs-quick");if(q){q.innerHTML='<b>Räkna själv:</b> F = '+f(Math.round(v)/10)+'. Reaktion '+f(Math.round(v)/10)+' × 3 = '+Math.round(F*3)+' m. Broms '+f(Math.round(v)/10)+' × '+f(Math.round(v)/10)+' ÷ 2'+(fa>1?' × '+f(fa):'')+' = '+Math.round(F*F/2*fa)+' m. Stopp ≈ '+Math.round(F*3+F*F/2*fa)+' m.'}
 var W=560,sc=W/tot,x1=Math.max(2,r*sc),x2=Math.max(2,b*sc);
 fg.innerHTML='<svg viewBox="0 0 600 120" role="img" aria-label="Stoppsträcka '+m(tot)+': reaktionssträcka '+m(r)+' och bromssträcka '+m(b)+'">'+
 '<line x1="20" y1="50" x2="'+(20+x1)+'" y2="50" stroke="#7fe0c8" stroke-width="22"/>'+
